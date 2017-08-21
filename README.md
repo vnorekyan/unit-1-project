@@ -1,2 +1,8 @@
 # unit-1-project
-sldjfsdfj
+
+Technologies:
+  CSS grids?
+  javascript/jQuery
+  Bootstrap?
+
+  
