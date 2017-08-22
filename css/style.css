@@ -63,58 +63,16 @@ main {
 }
 
 #gameboard {
-  border: 1px solid black;
+  border: 2px solid violet;
   width: 80%;
   height: 560px;
 }
 
 td {
-  border: 1px solid black;
+  border: 2px solid violet;
   height: 100px;
   width: 200px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
-
-/*.row-0-column-6 {
-  background-image: url('../blue-diamond.jpeg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.row-3-column-6 {
-  background-image: url('../green-diamond.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.row-4-column-6 {
-  background-image: url('../pink-sapphire.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.row-5-column-6 {
-  background-image: url('../blue-gem.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.row-6-column-6 {
-  background-image: url('../rubellite-tourmaline.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.row-7-column-6 {
-  background-image: url('../pink-tourmaline.jpg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}*/
