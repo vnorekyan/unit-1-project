@@ -38,20 +38,30 @@
         var cell = $('<td>').addClass('row-'+i+'-column-'+j);
         var clicked = [];
         cell.on('click', function() {
-          console.log($(this).attr('class'));
+          //console.log($(this).attr('class'));
           if (clicked.length === 0) {
             clicked.push(this);
             $(this).css('border','2px solid violet');
           } else if (clicked.length === 1) {
             clicked.push(this);
             $(this).css('border','2px solid violet');
+
             var first = clicked[0];
             var second = clicked[1];
+            var firstSeparated = first.className.split('-');
+            var secondSeparated = second.className.split('-');
+            var rowFirst = Number(firstSeparated[1]);
+            var columnFirst = Number(firstSeparated[3]);
+            var rowSecond = Number(secondSeparated[1]);
+            var columnSecond = Number(secondSeparated[3]);
 
-            //swap the background images of the 2 clicked elements
-            var temp = first.style.backgroundImage;
-            first.style.backgroundImage = second.style.backgroundImage;
-            second.style.backgroundImage = temp;
+            if((rowSecond === rowFirst + 1 || rowSecond === rowFirst - 1 || rowFirst === rowSecond) && (columnSecond === columnFirst + 1 || columnSecond === columnFirst - 1 || columnFirst === columnSecond)) {
+              //swap the background images of the 2 clicked elements
+              var temp = first.style.backgroundImage;
+              first.style.backgroundImage = second.style.backgroundImage;
+              second.style.backgroundImage = temp;
+            }
+
             first.style.border = '2px solid lavender';
             second.style.border = '2px solid lavender';
             console.log('2 clicked!');
