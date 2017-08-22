@@ -2,8 +2,8 @@
 
   var populateBoard = function() {
 
-    for (var i = 0; i < 9; i++) {
-      for (var j = 0; j < 9; j++) {
+    for (var i = 0; i < 6; i++) {
+      for (var j = 0; j < 13; j++) {
         var randNum = Math.floor(Math.random() * 6) + 1;
 
         switch(randNum) {
@@ -31,20 +31,20 @@
   }
 
   var createBoard = function() {
-    for (let i = 0; i < 9; i++) {
+    for (let i = 0; i < 6; i++) {
       var row = $('<tr>').attr('id', 'row-'+i);
       $('#gameboard')[0].append(row[0]);
-      for (let j = 0; j < 9; j++) {
+      for (let j = 0; j < 13; j++) {
         var cell = $('<td>').addClass('row-'+i+'-column-'+j);
         var clicked = [];
         cell.on('click', function() {
           console.log($(this).attr('class'));
           if (clicked.length === 0) {
             clicked.push(this);
-            $(this).css('border','2px solid red');
+            $(this).css('border','2px solid violet');
           } else if (clicked.length === 1) {
             clicked.push(this);
-            $(this).css('border','2px solid red');
+            $(this).css('border','2px solid violet');
             var first = clicked[0];
             var second = clicked[1];
 
@@ -52,8 +52,8 @@
             var temp = first.style.backgroundImage;
             first.style.backgroundImage = second.style.backgroundImage;
             second.style.backgroundImage = temp;
-            first.style.border = '2px solid violet';
-            second.style.border = '2px solid violet';
+            first.style.border = '2px solid lavender';
+            second.style.border = '2px solid lavender';
             console.log('2 clicked!');
             clicked = [];
           }
