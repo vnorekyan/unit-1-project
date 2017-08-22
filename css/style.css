@@ -13,14 +13,14 @@ main {
   display: inline-block;
   border: 1px black solid;
   padding: 10px 30px;
-  width: 25%;
+  width: 20%;
 }
 
 .scoreboard-wrapper {
   display: flex;
   justify-content: space-around;
   border: 1px black solid;
-  width: 75%;
+  width: 80%;
 }
 
 .scoreboard {
@@ -28,8 +28,8 @@ main {
 }
 
 .progress-bar-wrapper {
-  padding: 50px 30px 50px 30px;
-  width: 10%;
+  padding: 70px 30px 70px 30px;
+  width: 20%;
   /*border: 1px black solid;*/
   display: flex;
   justify-content: center;
@@ -54,16 +54,67 @@ main {
 
 .gameboard-wrapper {
   /*border: 1px solid black; for tablet */
-  width: 90%;   /*25 and 75 percent for tablet*/
+  width: 80%;   /*25 and 75 percent for tablet*/
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px 0 50px 0;
+  padding: 70px 0 70px 0;
 }
 
-.gameboard {
+#gameboard {
   border: 1px solid black;
-  width: 60%;
+  width: 80%;
   height: 560px;
 }
+
+td {
+  border: 1px solid black;
+  height: 100px;
+  width: 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*.row-0-column-6 {
+  background-image: url('../blue-diamond.jpeg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.row-3-column-6 {
+  background-image: url('../green-diamond.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.row-4-column-6 {
+  background-image: url('../pink-sapphire.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.row-5-column-6 {
+  background-image: url('../blue-gem.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.row-6-column-6 {
+  background-image: url('../rubellite-tourmaline.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.row-7-column-6 {
+  background-image: url('../pink-tourmaline.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}*/
