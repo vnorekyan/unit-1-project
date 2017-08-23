@@ -92,3 +92,11 @@ td {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.active-1 {
+  border: 2px solid violet;
+}
+
+.active-2 {
+  border: 2px solid blue;
+}
