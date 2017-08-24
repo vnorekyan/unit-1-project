@@ -1,31 +1,32 @@
 var score = 0;
 var level = 1;
 var lost = false;
+var highScore = 0;
 
 var proceed = function(moves){
   $('.to-delete').each(function() {
-    $(this).fadeOut('slow').delay(300);
+    // $(this).fadeOut('fast');
     $(this).css('background-image', 'none');
     var randNum = Math.floor(Math.random() * 6) + 1;
 
     switch(randNum) {
       case 1:
-        $(this).fadeIn('slow').css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/blue-diamond.jpeg)');
+        $(this).fadeIn('fast').css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/blue-diamond.jpeg)');
         break;
       case 2:
-        $(this).fadeIn('slow').css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/green-diamond.jpg)');
+        $(this).fadeIn('fast').css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/green-diamond.jpg)');
         break;
       case 3:
-        $(this).fadeIn('slow').css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/pink-sapphire.jpg)');
+        $(this).fadeIn('fast').css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/pink-sapphire.jpg)');
         break;
       case 4:
-        $(this).fadeIn('slow').css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/blue-gem.jpg)');
+        $(this).fadeIn('fast').css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/blue-gem.jpg)');
         break;
       case 5:
-        $(this).fadeIn('slow').css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/rubellite-tourmaline.jpg)');
+        $(this).fadeIn('fast').css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/rubellite-tourmaline.jpg)');
         break;
       case 6:
-        $(this).fadeIn('slow').css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/pink-tourmaline.jpg)');
+        $(this).fadeIn('fast').css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/pink-tourmaline.jpg)');
         break;
     }
     score += 10;
@@ -39,20 +40,45 @@ var proceed = function(moves){
     }
   }
 
+  var playAgain = function(){
+    var playButton = $('<button>').text('PLAY AGAIN');
+    $('.gameboard-wrapper').append(playButton);
+    playButton.on('click',function() {
+      console.log('hi');
+      createBoard();
+      populateBoard();
+      $('#gameboard').css('visibility','visible').css('height','560px');
+      $('button').remove();
+      $('.gameboard-wrapper h1').remove();
+      if(score > highScore) {
+        highScore = score;
+      }
+      score = 0;
+      level = 1;
+      moves = 0;
+      $('#high-score').text('HIGH SCORE: ' + highScore);
+      $('#score').text('SCORE: ' + score);
+      $('#level').text('LEVEL: ' + level);
+      $('#number-moves').text('NUMBER OF MOVES: ' + moves);
+
+    });
+
+  }
+
   var loseGame = function(){
     lost = true;
-    $('#gameboard').remove();
-    var lostMessage = $('<h1>');
-    lostMessage.text('SORRY, YOU LOST :/');
+    $('#gameboard').empty().css('visibility','hidden').css('height','2px');
+    var lostMessage = $('<h1>').text('SORRY, YOU LOST :/');
     $('.gameboard-wrapper').append(lostMessage);
+    playAgain();
   }
 
   var winGame = function(){
     lost = true;
-    $('#gameboard').remove();
-    var winMessage = $('<h1>');
-    winMessage.text('CONGRATULATIONS, YOU WON :)');
+    $('#gameboard').empty().css('visibility','hidden').css('height','2px');
+    var winMessage = $('<h1>').text('CONGRATULATIONS, YOU WON :)');
     $('.gameboard-wrapper').append(winMessage);
+    playAgain();
   }
 
   //levels

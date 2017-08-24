@@ -1,5 +1,3 @@
-(function() {
-
   var populateBoard = function() {
 
     for (var i = 0; i < 6; i++) {
@@ -80,5 +78,3 @@
 
   createBoard();
   populateBoard();
-
-})();
