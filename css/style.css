@@ -33,7 +33,7 @@ header {
   font-weight: 500;
 }
 
-/*.progress-bar-wrapper {
+.progress-bar-wrapper {
   padding: 100px 0 100px 95px;
   width: 20%;
   display: flex;
@@ -56,15 +56,15 @@ header {
   margin: 0;
   border-bottom: 2px purple solid;
   width: 32px;
-  height: 50px;
+  height: 530px;
   bottom: 0px;
   background-color: white;
   border-radius: 17px;
-}*/
+}
 
 .gameboard-wrapper {
   /*border: 1px solid black; for tablet */
-  width: 100%;   /*25 and 75 percent for tablet*/
+  width: 80%;   /*25 and 75 percent for tablet*/
   height: auto;
   /*display: flex;
   justify-content: center;
@@ -118,7 +118,7 @@ button {
 .gameboard-wrapper button {
   text-align: center;
   display: block;
-  margin-left: 37.5%;
+  margin-left: 33%;
 }
 
 nav {

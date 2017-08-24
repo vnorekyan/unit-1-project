@@ -1,7 +1,10 @@
-  var populateBoard = function() {
+var rows = 6;
+var columns = 9;
 
-    for (var i = 0; i < 6; i++) {
-      for (var j = 0; j < 13; j++) {
+var populateBoard = function() {
+
+    for (var i = 0; i < rows; i++) {
+      for (var j = 0; j < columns; j++) {
         var randNum = Math.floor(Math.random() * 6) + 1;
 
         switch(randNum) {
@@ -29,10 +32,10 @@
   }
 
   var createBoard = function() {
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < rows; i++) {
       var row = $('<tr>').attr('id', 'row-'+i);
       $('#gameboard')[0].append(row[0]);
-      for (let j = 0; j < 13; j++) {
+      for (let j = 0; j < columns; j++) {
         var cell = $('<td>').addClass('row-'+i+'-column-'+j);
         var clicked = [];
         var numMoves = 0;

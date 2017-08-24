@@ -5,16 +5,16 @@ var checkStone = function(stone){
   var column = Number(stoneSeparated[3]);
   var stoneImg = stone.style.backgroundImage;
 
-  for (var i = 0; i < 6; i++){
-    for (var j = 0; j < 13; j++){
+  for (var i = 0; i < rows; i++){
+    for (var j = 0; j < columns; j++){
       if ((i === row || j === column) && ($('.row-'+i+'-column-'+j).css('background-image') === stoneImg)){
         $('.row-'+i+'-column-'+j).addClass('active');
       }
     }
   }
 
-  for (var i = 0; i < 6; i++){
-    for (var j = 0; j < 13; j++){
+  for (var i = 0; i < rows; i++){
+    for (var j = 0; j < columns; j++){
       if(($('.row-'+i+'-column-'+j).css('background-image') === stoneImg)
       && ($('.row-'+i+'-column-'+(j+1)).css('background-image') === stoneImg)
       && ($('.row-'+i+'-column-'+(j+2)).css('background-image') === stoneImg)){
