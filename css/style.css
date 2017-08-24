@@ -135,3 +135,12 @@ a {
   color: lavender;
   font-size: 1.2rem;
 }
+
+main {
+  display: flex;
+  justify-content: center;
+}
+#info {
+  font-size: 1.5rem;
+  margin: 50px;
+}

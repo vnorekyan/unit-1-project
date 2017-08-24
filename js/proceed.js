@@ -1,7 +1,13 @@
 var score = 0;
 var level = 1;
 var lost = false;
-var highScore = 0;
+var highScore = localStorage.getItem('highScore');
+
+if(highScore === 'undefined'){
+  highScore = 0;
+}
+
+$('#high-score').text('HIGH SCORE: ' + highScore);
 
 var proceed = function(moves){
   $('.to-delete').each(function() {
@@ -52,6 +58,7 @@ var proceed = function(moves){
       $('.gameboard-wrapper h1').remove();
       if(score > highScore) {
         highScore = score;
+        localStorage.setItem('highScore', highScore);
       }
       score = 0;
       level = 1;
