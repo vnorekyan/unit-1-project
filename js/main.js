@@ -1,5 +1,5 @@
 var rows = 6;
-var columns = 9;
+var columns = 10;
 
 var populateBoard = function() {
 
@@ -24,7 +24,7 @@ var populateBoard = function() {
             $('.row-'+i+'-column-'+j).css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/rubellite-tourmaline.jpg)');
             break;
           case 6:
-            $('.row-'+i+'-column-'+j).css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/pink-tourmaline.jpg)');
+            $('.row-'+i+'-column-'+j).css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/diamond.png)');
             break;
         }
       }

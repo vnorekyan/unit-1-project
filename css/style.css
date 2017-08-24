@@ -14,7 +14,7 @@ header {
   font-size: 1.2rem;
   font-weight: 700;
   border: 2px purple solid;
-  padding: 10px 30px;
+  padding: 0 30px;
   width: 20%;
   background-color: lavender;
 }
@@ -35,7 +35,7 @@ header {
 
 .progress-bar-wrapper {
   padding: 100px 0 100px 95px;
-  width: 20%;
+  width: 10%;
   display: flex;
   justify-content: flex-start;
 }

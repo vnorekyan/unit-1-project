@@ -32,7 +32,7 @@ var proceed = function(moves){
         $(this).fadeIn('fast').css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/rubellite-tourmaline.jpg)');
         break;
       case 6:
-        $(this).fadeIn('fast').css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/pink-tourmaline.jpg)');
+        $(this).fadeIn('fast').css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/diamond.png)');
         break;
     }
     score += 10;
@@ -67,7 +67,7 @@ var proceed = function(moves){
       $('#score').text('SCORE: ' + score);
       $('#level').text('LEVEL: ' + level);
       $('#number-moves').text('NUMBER OF MOVES: ' + moves);
-
+      $('.progress-bar-filling').css('height', 530 + 'px');
     });
 
   }
@@ -139,31 +139,31 @@ var proceed = function(moves){
       }
       break;
     case 4:
-      if (score >= 1000 && score < 1100){
+      if (score >= 1000 && score < 1200){
         $('.progress-bar-filling').css('height', (530-(0.333*530)) + 'px');
       }
 
-      if (score >= 1100 && score < 1200){
+      if (score >= 1200 && score < 1400){
         $('.progress-bar-filling').css('height', (530-(0.66*530)) + 'px');
       }
-      if(score >= 1200 && moves <= 30) {
+      if(score >= 1400 && moves <= 35) {
         level = 5;
         $('.progress-bar-filling').css('height', 530 + 'px');
-      } else if (moves === 30 && score < 1200){
+      } else if (moves === 35 && score < 1400){
         loseGame();
       }
       break;
     case 5:
-      if (score >= 1300 && score < 1400){
+      if (score >= 1500 && score < 1600){
         $('.progress-bar-filling').css('height', (530-(0.333*530)) + 'px');
       }
 
-      if (score >= 1400 && score < 1500){
+      if (score >= 1600 && score < 1700){
         $('.progress-bar-filling').css('height', (530-(0.66*530)) + 'px');
       }
-      if(score >= 1500 && moves <= 35) {
+      if(score >= 1700 && moves <= 40) {
         winGame();
-      } else if (moves === 35 && score < 1500){
+      } else if (moves === 40 && score < 1700){
         loseGame();
       }
       break;
