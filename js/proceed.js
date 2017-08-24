@@ -17,22 +17,22 @@ var proceed = function(moves){
 
     switch(randNum) {
       case 1:
-        $(this).fadeIn('fast').css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/blue-diamond.jpeg)');
+        $(this).fadeIn('fast').css('background-image', 'url(https://vnorekyan.github.io/unit-1-project/images/blue-diamond.jpeg)');
         break;
       case 2:
-        $(this).fadeIn('fast').css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/green-diamond.jpg)');
+        $(this).fadeIn('fast').css('background-image', 'url(https://vnorekyan.github.io/unit-1-project/images/green-diamond.jpg)');
         break;
       case 3:
-        $(this).fadeIn('fast').css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/pink-sapphire.jpg)');
+        $(this).fadeIn('fast').css('background-image', 'url(https://vnorekyan.github.io/unit-1-project/images/pink-sapphire.jpg)');
         break;
       case 4:
-        $(this).fadeIn('fast').css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/blue-gem.jpg)');
+        $(this).fadeIn('fast').css('background-image', 'url(https://vnorekyan.github.io/unit-1-project/images/blue-gem.jpg)');
         break;
       case 5:
-        $(this).fadeIn('fast').css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/rubellite-tourmaline.jpg)');
+        $(this).fadeIn('fast').css('background-image', 'url(https://vnorekyan.github.io/unit-1-project/images/rubellite-tourmaline.jpg)');
         break;
       case 6:
-        $(this).fadeIn('fast').css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/diamond.png)');
+        $(this).fadeIn('fast').css('background-image', 'url(https://vnorekyan.github.io/unit-1-project/images/diamond.png)');
         break;
     }
     score += 10;

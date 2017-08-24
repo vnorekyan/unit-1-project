@@ -9,22 +9,22 @@ var populateBoard = function() {
 
         switch(randNum) {
           case 1:
-            $('.row-'+i+'-column-'+j).css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/blue-diamond.jpeg)');
+            $('.row-'+i+'-column-'+j).css('background-image', 'url(https://vnorekyan.github.io/unit-1-project/images/blue-diamond.jpeg)');
             break;
           case 2:
-            $('.row-'+i+'-column-'+j).css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/green-diamond.jpg)');
+            $('.row-'+i+'-column-'+j).css('background-image', 'url(https://vnorekyan.github.io/unit-1-project/images/green-diamond.jpg)');
             break;
           case 3:
-            $('.row-'+i+'-column-'+j).css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/pink-sapphire.jpg)');
+            $('.row-'+i+'-column-'+j).css('background-image', 'url(https://vnorekyan.github.io/unit-1-project/images/pink-sapphire.jpg)');
             break;
           case 4:
-            $('.row-'+i+'-column-'+j).css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/blue-gem.jpg)');
+            $('.row-'+i+'-column-'+j).css('background-image', 'url(https://vnorekyan.github.io/unit-1-project/images/blue-gem.jpg)');
             break;
           case 5:
-            $('.row-'+i+'-column-'+j).css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/rubellite-tourmaline.jpg)');
+            $('.row-'+i+'-column-'+j).css('background-image', 'url(https://vnorekyan.github.io/unit-1-project/images/rubellite-tourmaline.jpg)');
             break;
           case 6:
-            $('.row-'+i+'-column-'+j).css('background-image', 'url(file:///Users/jzv795/Documents/CODA/unit-1-project/images/diamond.png)');
+            $('.row-'+i+'-column-'+j).css('background-image', 'url(https://vnorekyan.github.io/unit-1-project/images/diamond.png)');
             break;
         }
       }
