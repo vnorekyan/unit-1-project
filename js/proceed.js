@@ -3,7 +3,7 @@ var level = 1;
 var lost = false;
 var highScore = localStorage.getItem('highScore');
 
-if(highScore === 'undefined' || highScore === 'null'){
+if(highScore === 'undefined' || highScore === null){
   highScore = 0;
 }
 
