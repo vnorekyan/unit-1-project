@@ -11,28 +11,27 @@ $('#high-score').text('HIGH SCORE: ' + highScore);
 
 var proceed = function(moves){
   $('.to-delete').each(function() {
-    // $(this).fadeOut('fast');
     $(this).css('background-image', 'none');
     var randNum = Math.floor(Math.random() * 6) + 1;
 
     switch(randNum) {
       case 1:
-        $(this).fadeIn('fast').css('background-image', 'url(https://vnorekyan.github.io/unit-1-project/images/blue-diamond.jpeg)');
+        $(this).css('background-image', 'url(https://vnorekyan.github.io/unit-1-project/images/blue-diamond.jpeg)');
         break;
       case 2:
-        $(this).fadeIn('fast').css('background-image', 'url(https://vnorekyan.github.io/unit-1-project/images/green-diamond.jpg)');
+        $(this).css('background-image', 'url(https://vnorekyan.github.io/unit-1-project/images/green-diamond.jpg)');
         break;
       case 3:
-        $(this).fadeIn('fast').css('background-image', 'url(https://vnorekyan.github.io/unit-1-project/images/pink-sapphire.jpg)');
+        $(this).css('background-image', 'url(https://vnorekyan.github.io/unit-1-project/images/pink-sapphire.jpg)');
         break;
       case 4:
-        $(this).fadeIn('fast').css('background-image', 'url(https://vnorekyan.github.io/unit-1-project/images/blue-gem.jpg)');
+        $(this).css('background-image', 'url(https://vnorekyan.github.io/unit-1-project/images/blue-gem.jpg)');
         break;
       case 5:
-        $(this).fadeIn('fast').css('background-image', 'url(https://vnorekyan.github.io/unit-1-project/images/rubellite-tourmaline.jpg)');
+        $(this).css('background-image', 'url(https://vnorekyan.github.io/unit-1-project/images/rubellite-tourmaline.jpg)');
         break;
       case 6:
-        $(this).fadeIn('fast').css('background-image', 'url(https://vnorekyan.github.io/unit-1-project/images/diamond.png)');
+        $(this).css('background-image', 'url(https://vnorekyan.github.io/unit-1-project/images/diamond.png)');
         break;
     }
     score += 10;
