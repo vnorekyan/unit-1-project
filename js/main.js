@@ -63,7 +63,7 @@
               second.style.backgroundImage = temp;
 
               checkPair(first,second);
-              proceed();
+              proceed(numMoves);
 
             }
             console.log('2 clicked!');
