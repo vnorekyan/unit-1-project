@@ -15,7 +15,7 @@ header {
   font-size: 1.2rem;
   font-weight: 700;
   border: 2px purple solid;
-  padding: 0 30px;
+  padding: 0;
   width: 20%;
   background-color: lavender;
 }
@@ -232,6 +232,10 @@ main {
   .progress-bar-wrapper {
     display: none;
   }
+
+  .gameboard-wrapper h1 {
+    font-size: 2rem;
+  }
 }
 
 @media screen and (max-width: 660px) {
@@ -273,5 +277,9 @@ main {
 
   .progress-bar-wrapper {
     display: none;
+  }
+
+  .gameboard-wrapper h1 {
+    font-size: 1.5rem;
   }
 }
