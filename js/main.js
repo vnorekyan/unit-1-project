@@ -1,5 +1,5 @@
 var rows = 6;
-var columns = 10;
+var columns = 8;
 var movesLeft = 15;
 
 var populateBoard = function() {
