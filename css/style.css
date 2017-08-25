@@ -47,7 +47,7 @@ header {
   height: 530px;
   display: flex;
   justify-content: center;
-  border-radius: 17px;
+  border-radius: 10px;
   background: linear-gradient(violet, purple);
 }
 
@@ -60,7 +60,7 @@ header {
   height: 530px;
   bottom: 0px;
   background-color: white;
-  border-radius: 17px;
+  border-radius: 10px;
 }
 
 .gameboard-wrapper {
@@ -144,4 +144,6 @@ main {
 #info {
   font-size: 1.5rem;
   margin: 50px;
+  width: 70%;
+  text-align: center;
 }
