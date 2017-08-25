@@ -1,5 +1,6 @@
 var rows = 6;
 var columns = 10;
+var movesLeft = 15;
 
 var populateBoard = function() {
 
@@ -70,7 +71,9 @@ var populateBoard = function() {
             console.log('2 clicked!');
             clicked = [];
             numMoves++;
+            movesLeft--;
             $('#number-moves').text('NUMBER OF MOVES: ' + numMoves);
+            $('#moves-left').text('MOVES LEFT: ' + movesLeft);
           }
         });
         $('#row-'+i)[0].append(cell[0]);

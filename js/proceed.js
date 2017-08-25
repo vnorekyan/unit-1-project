@@ -62,10 +62,12 @@ var proceed = function(moves){
       score = 0;
       level = 1;
       moves = 0;
+      movesLeft = 15;
       $('#high-score').text('HIGH SCORE: ' + highScore);
       $('#score').text('SCORE: ' + score);
       $('#level').text('LEVEL: ' + level);
       $('#number-moves').text('NUMBER OF MOVES: ' + moves);
+      $('#moves-left').text('MOVES LEFT: ' + movesLeft);
       $('.progress-bar-filling').css('height', 530 + 'px');
     });
 
@@ -76,6 +78,7 @@ var proceed = function(moves){
     $('#gameboard').empty().css('visibility','hidden').css('height','2px');
     var lostMessage = $('<h1>').text("SORRY, YOU RAN OUT OF MOVES :/");
     $('.gameboard-wrapper').append(lostMessage);
+    $('#moves-left').text('MOVES LEFT: ' + 0);
     playAgain();
   }
 
@@ -91,74 +94,83 @@ var proceed = function(moves){
 
   switch(level){
     case 1:
+      $('#moves-left').text('MOVES LEFT: ' + movesLeft);
       if (score >= 100 && score < 200){
-        $('.progress-bar-filling').css('height', (530-(0.333*530)) + 'px');
+        $('.progress-bar-filling').css('height', (530-(0.333*530)) + 'px').css('border-radius', '0px');
       }
 
       if (score >= 200 && score < 300){
-        $('.progress-bar-filling').css('height', (530-(0.66*530)) + 'px');
+        $('.progress-bar-filling').css('height', (530-(0.66*530)) + 'px').css('border-radius','0px');
       }
 
       if(score >= 300 && moves <= 15) {
         level = 2;
-        $('.progress-bar-filling').css('height', 530 + 'px');
+        movesLeft = (20 - moves);
+        $('#moves-left').text('MOVES LEFT: ' + movesLeft);
+        $('.progress-bar-filling').css('height', 530 + 'px').css('border-radius','17px');
       } else if (moves === 15 && score < 300){
         loseGame();
       }
       break;
     case 2:
       if (score >= 400 && score < 500){
-        $('.progress-bar-filling').css('height', (530-(0.333*530)) + 'px');
+        $('.progress-bar-filling').css('height', (530-(0.333*530)) + 'px').css('border-radius','0px');
       }
 
       if (score >= 500 && score < 600){
-        $('.progress-bar-filling').css('height', (530-(0.66*530)) + 'px');
+        $('.progress-bar-filling').css('height', (530-(0.66*530)) + 'px').css('border-radius','0px');
       }
       if(score >= 600 && moves <= 20) {
         level = 3;
-        $('.progress-bar-filling').css('height', 530 + 'px');
+        movesLeft = (25 - moves);
+        $('#moves-left').text('MOVES LEFT: ' + movesLeft);
+        $('.progress-bar-filling').css('height', 530 + 'px').css('border-radius','17px');
       } else if (moves === 20 && score < 600){
         loseGame();
       }
     break;
     case 3:
       if (score >= 700 && score < 800){
-        $('.progress-bar-filling').css('height', (530-(0.333*530)) + 'px');
+        $('.progress-bar-filling').css('height', (530-(0.333*530)) + 'px').css('border-radius','0px');
       }
 
       if (score >= 800 && score < 900){
-        $('.progress-bar-filling').css('height', (530-(0.66*530)) + 'px');
+        $('.progress-bar-filling').css('height', (530-(0.66*530)) + 'px').css('border-radius','0px');
       }
 
       if(score >= 900 && moves <= 25) {
         level = 4;
-        $('.progress-bar-filling').css('height', 530 + 'px');
+        movesLeft = (35 - moves);
+        $('#moves-left').text('MOVES LEFT: ' + movesLeft);
+        $('.progress-bar-filling').css('height', 530 + 'px').css('border-radius','17px');
       } else if (moves === 25 && score < 900){
         loseGame();
       }
       break;
     case 4:
       if (score >= 1000 && score < 1200){
-        $('.progress-bar-filling').css('height', (530-(0.333*530)) + 'px');
+        $('.progress-bar-filling').css('height', (530-(0.333*530)) + 'px').css('border-radius','0px');
       }
 
       if (score >= 1200 && score < 1400){
-        $('.progress-bar-filling').css('height', (530-(0.66*530)) + 'px');
+        $('.progress-bar-filling').css('height', (530-(0.66*530)) + 'px').css('border-radius','0px');
       }
       if(score >= 1400 && moves <= 35) {
         level = 5;
-        $('.progress-bar-filling').css('height', 530 + 'px');
+        movesLeft = (40 - moves);
+        $('#moves-left').text('MOVES LEFT: ' + movesLeft);
+        $('.progress-bar-filling').css('height', 530 + 'px').css('border-radius','17px');
       } else if (moves === 35 && score < 1400){
         loseGame();
       }
       break;
     case 5:
       if (score >= 1500 && score < 1600){
-        $('.progress-bar-filling').css('height', (530-(0.333*530)) + 'px');
+        $('.progress-bar-filling').css('height', (530-(0.333*530)) + 'px').css('border-radius','0px');
       }
 
       if (score >= 1600 && score < 1700){
-        $('.progress-bar-filling').css('height', (530-(0.66*530)) + 'px');
+        $('.progress-bar-filling').css('height', (530-(0.66*530)) + 'px').css('border-radius','0px');
       }
       if(score >= 1700 && moves <= 40) {
         winGame();
