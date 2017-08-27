@@ -151,6 +151,8 @@ main {
   }
   .title {
     width: 100%;
+    border-right: none;
+    padding: 0 0 0 20px;
   }
 
   .scoreboard-wrapper {
@@ -173,6 +175,8 @@ main {
   }
   .title {
     width: 100%;
+    border-right: none;
+    padding: 0 0 0 20px;
   }
 
   .scoreboard-wrapper {
@@ -214,6 +218,8 @@ main {
   .title {
     width: 100%;
     font-size: 1rem;
+    border-right: none;
+    padding: 0 0 0 20px;
   }
 
   .scoreboard-wrapper {
@@ -260,6 +266,8 @@ main {
   .title {
     width: 100%;
     font-size: .9rem;
+    border-right: none;
+    padding: 0 0 0 20px;
   }
 
   .scoreboard-wrapper {
