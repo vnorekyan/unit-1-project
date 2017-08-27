@@ -3,14 +3,17 @@ var level = 1;
 var lost = false;
 var highScore = localStorage.getItem('highScore');
 
+//if there is no high score saved in local storage, set high score to 0
 if(highScore === 'undefined' || highScore === null){
   highScore = 0;
 }
 
 $('#high-score').text('HIGH SCORE: ' + highScore);
 
+//scorekeeping and levels
 var proceed = function(moves){
   $('.to-delete').each(function() {
+    //remove background image for cells marked for deletion and replace with new random image
     $(this).css('background-image', 'none');
     var randNum = Math.floor(Math.random() * 6) + 1;
 
@@ -34,6 +37,7 @@ var proceed = function(moves){
         $(this).css('background-image', 'url(https://vnorekyan.github.io/unit-1-project/images/diamond.png)');
         break;
     }
+    //update score
     score += 10;
   });
 
@@ -41,10 +45,12 @@ var proceed = function(moves){
 
   for (var i = 0; i < rows; i++){
     for (var j = 0; j < columns; j++){
+      //clear the highligting
       $('.row-'+i+'-column-'+j).removeClass('active to-delete').css('border','2px solid lavender');
     }
   }
 
+  //play again button created and high score saved in local storage
   var playAgain = function(){
     var playButton = $('<button>').text('PLAY AGAIN');
     $('.gameboard-wrapper').append(playButton);
@@ -73,6 +79,7 @@ var proceed = function(moves){
 
   }
 
+  //losing message
   var loseGame = function(){
     lost = true;
     $('#gameboard').empty().css('visibility','hidden').css('height','2px');
@@ -82,6 +89,7 @@ var proceed = function(moves){
     playAgain();
   }
 
+  //winning message
   var winGame = function(){
     lost = true;
     $('#gameboard').empty().css('visibility','hidden').css('height','2px');
@@ -90,8 +98,7 @@ var proceed = function(moves){
     playAgain();
   }
 
-  //levels
-
+  //progressing to levels and setting the height of the progress bar filling
   switch(level){
     case 1:
       $('#moves-left').text('MOVES LEFT: ' + movesLeft);

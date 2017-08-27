@@ -14,8 +14,9 @@ header {
   justify-content: flex-start;
   font-size: 1.2rem;
   font-weight: 700;
-  border: 2px purple solid;
-  padding: 0;
+  border-right: 2px purple solid;
+  border-bottom: 2px purple solid;
+  padding: 0 20px;
   width: 20%;
   background-color: lavender;
 }
@@ -23,7 +24,7 @@ header {
 .scoreboard-wrapper {
   display: flex;
   justify-content: space-around;
-  border: 2px purple solid;
+  border-bottom: 2px purple solid;
   width: 80%;
   background-color: lavender;
 }

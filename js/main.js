@@ -1,5 +1,6 @@
 var rows = 6;
 var columns = 8;
+//number of moves left before user runs out of moves
 var movesLeft = 15;
 
 var populateBoard = function() {
@@ -38,11 +39,14 @@ var populateBoard = function() {
       $('#gameboard')[0].append(row[0]);
       for (let j = 0; j < columns; j++) {
         var cell = $('<td>').addClass('row-'+i+'-column-'+j);
+        //elements clicked
         var clicked = [];
+        //number of moves used
         var numMoves = 0;
         cell.on('click', function() {
           if (clicked.length === 0) {
             clicked.push(this);
+            //highlight clicked elements
             $(this).css('border','2px solid violet');
           } else if (clicked.length === 1) {
             clicked.push(this);
@@ -64,12 +68,15 @@ var populateBoard = function() {
               first.style.backgroundImage = second.style.backgroundImage;
               second.style.backgroundImage = temp;
 
+              //check if correct pattern is formed
               checkPair(first,second);
+              //logic for scorekeeping and moving on to next level is in the proceed method
               proceed(numMoves);
 
             }
             console.log('2 clicked!');
             clicked = [];
+            //update number of moves used and number of moves left
             numMoves++;
             movesLeft--;
             $('#number-moves').text('NUMBER OF MOVES: ' + numMoves);
