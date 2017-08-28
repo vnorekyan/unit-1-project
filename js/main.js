@@ -62,7 +62,11 @@ var populateBoard = function() {
             var columnSecond = Number(secondSeparated[3]);
 
             //check if adjacent elements
-            if((rowSecond === rowFirst + 1 || rowSecond === rowFirst - 1 || rowFirst === rowSecond) && (columnSecond === columnFirst + 1 || columnSecond === columnFirst - 1 || columnFirst === columnSecond)) {
+            if (rowFirst === rowSecond && columnFirst === columnSecond) {
+              //remove highlighting
+              first.style.border = '2px solid lavender';
+              second.style.border = '2px solid lavender';
+            } else if ((rowSecond === rowFirst + 1 || rowSecond === rowFirst - 1 || rowFirst === rowSecond) && (columnSecond === columnFirst + 1 || columnSecond === columnFirst - 1 || columnFirst === columnSecond)) {
               //swap the background images of the 2 clicked elements
               var temp = first.style.backgroundImage;
               first.style.backgroundImage = second.style.backgroundImage;
@@ -72,13 +76,19 @@ var populateBoard = function() {
               checkPair(first,second);
               //logic for scorekeeping and moving on to next level is in the proceed method
               proceed(numMoves);
+              //update number of moves used and number of moves left
+              numMoves++;
+              movesLeft--;
 
+            } else {
+              //remove highlighting
+              first.style.border = '2px solid lavender';
+              second.style.border = '2px solid lavender';
             }
+
             console.log('2 clicked!');
             clicked = [];
-            //update number of moves used and number of moves left
-            numMoves++;
-            movesLeft--;
+
             $('#number-moves').text('NUMBER OF MOVES: ' + numMoves);
             $('#moves-left').text('MOVES LEFT: ' + movesLeft);
           }

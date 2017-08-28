@@ -85,7 +85,6 @@ var proceed = function(moves){
     $('#gameboard').empty().css('visibility','hidden').css('height','2px');
     var lostMessage = $('<h1>').text("SORRY, YOU RAN OUT OF MOVES :/");
     $('.gameboard-wrapper').append(lostMessage);
-    $('#moves-left').text('MOVES LEFT: ' + 0);
     playAgain();
   }
 
@@ -141,6 +140,7 @@ var proceed = function(moves){
         $('#moves-left').text('MOVES LEFT: ' + movesLeft);
         $('.progress-bar-filling').css('height', 530 + 'px').css('border-radius','10px');
       } else if (moves === 15 && score < 300){
+        $('#moves-left').text('MOVES LEFT: 0');
         loseGame();
       }
       break;
@@ -183,6 +183,7 @@ var proceed = function(moves){
         $('#moves-left').text('MOVES LEFT: ' + movesLeft);
         $('.progress-bar-filling').css('height', 530 + 'px').css('border-radius','10px');
       } else if (moves === 20 && score < 600){
+        $('#moves-left').text('MOVES LEFT: 0');
         loseGame();
       }
     break;
@@ -225,6 +226,7 @@ var proceed = function(moves){
         $('#moves-left').text('MOVES LEFT: ' + movesLeft);
         $('.progress-bar-filling').css('height', 530 + 'px').css('border-radius','10px');
       } else if (moves === 25 && score < 900){
+        $('#moves-left').text('MOVES LEFT: 0');
         loseGame();
       }
       break;
@@ -255,6 +257,7 @@ var proceed = function(moves){
         $('#moves-left').text('MOVES LEFT: ' + movesLeft);
         $('.progress-bar-filling').css('height', 530 + 'px').css('border-radius','10px');
       } else if (moves === 35 && score < 1400){
+        $('#moves-left').text('MOVES LEFT: 0');
         loseGame();
       }
       break;
@@ -294,6 +297,7 @@ var proceed = function(moves){
       if(score >= 1700 && moves <= 40) {
         winGame();
       } else if (moves === 40 && score < 1700){
+        $('#moves-left').text('MOVES LEFT: 0');
         loseGame();
       }
       break;
