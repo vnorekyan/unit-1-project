@@ -13,7 +13,7 @@ Future features:
 Currently, the game only recognizes a pattern 3 or more consecutive jewels if it was created by swapping jewels, and the consecutive jewels recognized have to be the same as the swapped jewels. In the future, I'd like to add the ability to recognize this pattern when it is formed by randomly generated jewels at the beginning of the game.
 
 Bugs:
-Clicking on the same jewel twice counts as a move.
+Clicking on the same jewel twice counts as a move. UPDATE 8-27-17: fixed this.
 
 Biggest wins and challenges:
 The biggest challenge was writing the algorithm for recognizing that a pattern of 3 or more identical jewels was formed after swapping 2 jewels on the board. Cracking this problem after re-writing the game logic from scratch was my biggest win.
@@ -25,4 +25,4 @@ Rules of the game:
 The user swaps two adjacent jewels on the gameboard to create a pattern of 3 or more identical jewels in a row.
 
 Process for turning game into web application:
-This was pretty straightforward because this game already exists as a web application. 
+This was pretty straightforward because this game already exists as a web application.
